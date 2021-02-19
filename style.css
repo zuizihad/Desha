@@ -4,6 +4,7 @@
     background: #ffffff;
     box-shadow:  10px 10px 20px #d9d9d9,
              -10px -10px 20px #ffffff;
+    cursor: pointer;
 }
 .profile-card-info{
     display: flex;
@@ -15,4 +16,8 @@
     width: 30px;
     height: 30px;
     color: blue;
+}
+.desha-card{
+    display: flex;
+    justify-content: space-between;
 }

@@ -1,0 +1,986 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="generator" content="Hugo 0.80.0">
+    <title>Desha -Dashboard</title>
+
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/dashboard/"> -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">DESHA HOTEL</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+        <ul class="navbar-nav px-3">
+            <li class="nav-item text-nowrap">
+                <a class="nav-link" href="#">Sign out</a>
+            </li>
+        </ul>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">
+                                <span data-feather="home"></span>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="today-room-status.html">
+                                <span data-feather="file"></span>
+                                Today Room Status
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="shopping-cart"></span>
+                                Monthly View Reservation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="users"></span>
+                                Reservation List
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="bar-chart-2"></span>
+                                Reservation From Website
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="layers"></span>
+                                User Log
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="airplay"></span>
+                                Company Entry
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="alert-triangle"></span>
+                                Feedback
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="archive"></span>
+                                Today's Collection
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="award"></span>
+                                Guest List
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="box"></span>
+                                Old Guest List
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="thumbs-up"></span>
+                                New Reservation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="paperclip"></span>
+                                Company Due List
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="repeat"></span>
+                                Kitchen KOT List
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="power"></span>
+                                Day Close
+                            </a>
+                        </li>
+                    </ul>
+
+                    <!-- reports start -->
+                    <h6
+                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>Reports</span>
+                        <a class="link-secondary" href="#" aria-label="Add a new report">
+                            <span data-feather="plus-circle"></span>
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="bar-chart-2"></span>
+                                Account Report
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="dollar-sign"></span>
+                                Today's Cash Report
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="eye"></span>
+                                GL Balance Sheet
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="users"></span>
+                                Today's Guest List
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- reports end -->
+                    <h6
+                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
+                        <span>House Keeping</span>
+                        <a class="link-secondary" href="#" aria-label="Add a new report">
+                            <span data-feather="plus-circle"></span>
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="user"></span>
+                                House Keepers
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="upload-cloud"></span>
+                                Occupancy Report
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="trash-2"></span>
+                                House Keeping Report
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <!-- secondary nav start -->
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">TODAY'S ROOM STATUS</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <div class="btn-group me-2">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                        </div>
+                        <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                            <span data-feather="calendar"></span>
+                            This week
+                        </button>
+                    </div>
+                </div>
+                <!-- secondary nav end -->
+
+                <!-- total desha room status start -->
+                <section>
+                    <div class="row">
+                        <div class=" col-md-2 col-sm-12 m-auto">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="home"></span>
+                                    <h3 class="card-title">34</h3>
+                                    <h3 class="card-title">Total Vacant</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 m-auto">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="bell"></span>
+                                    <h3 class="card-title">27</h3>
+                                    <h3 class="card-title">Total O/C</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 m-auto">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="user-minus"></span>
+                                    <h3 class="card-title">12</h3>
+                                    <h3 class="card-title">Expected C/out</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 m-auto">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="user-plus"></span>
+                                    <h3 class="card-title">19</h3>
+                                    <h3 class="card-title">Expected C/IN</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 m-auto">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="user-x"></span>
+                                    <h3 class="card-title">14</h3>
+                                    <h3 class="card-title">Today C/out</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 m-auto">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="users"></span>
+                                    <h3 class="card-title">17</h3>
+                                    <h3 class="card-title">Today C/in</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- total desha room status end -->
+
+                <!-- floor no zero start -->
+                <section>
+                    <h1 class="text-center text-muted my-3">FLOOR NO: 0</h1>
+                    <div class="row my-5 ">
+                        <div class="col-md-3 col-sm-12 m-auto">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">Ball Room</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-12 m-auto">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">Stuff Canteen</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- floor no zero end -->
+
+                <!-- fllor no two start -->
+                <section>
+                    <h1 class="text-center text-muted my-3">FLOOR NO: 1</h1>
+                    <div class="row">
+                        <div class="col-md-2 m-auto">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">Auditorium</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- floor no two end -->
+
+                <!-- floor no three start -->
+                <section>
+                    <h1 class="text-center text-muted my-3">FLOOR NO: 2</h1>
+                    <div class="row">
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/2</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/3</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/4</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">402/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">402/2</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">402/3</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">402/4</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">403/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">403/2</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">403/3</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">403/4</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h3 class="card-title">401/1</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class=" col-md-2 col-sm-12 ">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-title">Desha office conference room</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                <!-- floor no three end -->
+
+                <!-- floor no four start -->
+                <section>
+                    <h1 class="text-center text-muted my-3">FLOOR NO: 4</h1>
+                    <div class="row">
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">501</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">502</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">503</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">504</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">505</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">506</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">507</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">508</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">509</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">510</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">511</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">512</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">513</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">514</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">Training room one</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">Training room two</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                <!-- floor no four end -->
+
+                <!-- floor no five start -->
+                <section>
+                    <h1 class="text-center text-muted my-3">FLOOR NO: 5</h1>
+                    <div class="row">
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">601</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">602</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">603</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">604</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">605</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">606</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">607</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">608</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">609</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">610</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">611</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">612</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">613</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">614</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">615</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">616</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">616</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">617</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">618</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">619</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">620</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">621</h6>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">622</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">623</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">624</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="card profile-card my-2 bg-danger" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                <div class="card-body profile-card-info">
+                                    <span class="my-3 profile-card-info-icon" data-feather="folder"></span>
+                                    <h6 class="card-subtitle mb-2 text-muted my-3">625</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- floor no five end -->
+
+                <!-- modal start -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Room Details</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <h5>Room No: 612</h5>
+                                <h5>Category: Dormetory</h5>
+                                <h5>Details: Dormetory</h5>
+                                <h5>Capacity: 04</h5>
+                                <h5>Price: 12500</h5>
+                                <h5>Status: Available</h5>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">ok</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- modal end -->
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+        integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"
+        integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha"
+        crossorigin="anonymous"></script>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
